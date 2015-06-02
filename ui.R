@@ -15,18 +15,19 @@ shinyUI(navbarPage("International gender & age explorer", theme = shinytheme("sp
     textInput("color2", "Color (female)", value = "red"),
     downloadButton('downloadPyramid', "Download plot (HTML)"), 
     p("Data come from the ", 
-    a("US Census Bureau's International Database. ", 
-      href = "http://www.census.gov/population/international/data/idb/informationGateway.php")), 
+      a("US Census Bureau's International Database. ", 
+        href = "http://www.census.gov/population/international/data/idb/informationGateway.php")), 
     br(), 
     p("App author: ", 
       a("Kyle Walker, Texas Christian University.  ", 
         href = "http://personal.tcu.edu/kylewalker"), 
-      a("Code on GitHub.", href = "https://github.com/walkerke/dimple-pyramid"), 
-      " This app was built in R and Dimple.js using the rcdimple package."), 
+      a("Code on GitHub.", href = "https://github.com/walkerke/gender-age-explorer"), 
+      " This app was built in R and Dimple.js using the rcdimple package. To run the app locally, 
+      issue the following command in RStudio: ", pre("shiny::runGitHub('walkerke/gender-age-explorer')")), 
     p("Many thanks to ", a("Kenton Russell, ", href = "https://twitter.com/timelyportfolio"), 
       a("John Kiernander, ", href = "https://twitter.com/jkiernander"), 
       a("Ramnath Vaidyanathan, ", href = "https://twitter.com/ramnath_vaidya"), "and the whole RStudio team!")
-  ),
+      ),
   mainPanel(
     dimpleOutput('pyramid', height = "800px")
   )
@@ -47,8 +48,9 @@ shinyUI(navbarPage("International gender & age explorer", theme = shinytheme("sp
          p("App author: ", 
            a("Kyle Walker, Texas Christian University.  ", 
              href = "http://personal.tcu.edu/kylewalker"), 
-           a("Code on GitHub.", href = "https://github.com/walkerke/dimple-pyramid"), 
-           " This app was built in R and Dimple.js using the rcdimple package."), 
+           a("Code on GitHub.", href = "https://github.com/walkerke/gender-age-explorer"), 
+           " This app was built in R and Dimple.js using the rcdimple package. To run the app locally, 
+           issue the following command in RStudio: ", pre("shiny::runGitHub('walkerke/gender-age-explorer')")), 
          p("Many thanks to ", a("Kenton Russell, ", href = "https://twitter.com/timelyportfolio"), 
            a("John Kiernander, ", href = "https://twitter.com/jkiernander"), 
            a("Ramnath Vaidyanathan, ", href = "https://twitter.com/ramnath_vaidya"), "and the whole RStudio team!")
